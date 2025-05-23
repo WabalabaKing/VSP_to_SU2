@@ -17,7 +17,7 @@ def run_cfd_mesh(vsp_file, minedge,maxedge, sym=False,
     vsp.SetCFDMeshVal( vsp.CFD_FAR_FIELD_FLAG  , farfield)
     
     if farfield:
-        vsp.SetCFDMeshVal( vsp.CFD_FAR_MAX_EDGE_LEN , farfield_scale*maxedge*5)
+        vsp.SetCFDMeshVal( vsp.CFD_FAR_MAX_EDGE_LEN , 20)
         vsp.SetCFDMeshVal( vsp.CFD_FAR_X_SCALE  , farfield_scale)
         vsp.SetCFDMeshVal( vsp.CFD_FAR_Y_SCALE  , farfield_scale)
         vsp.SetCFDMeshVal( vsp.CFD_FAR_Z_SCALE  , 5*farfield_scale)
