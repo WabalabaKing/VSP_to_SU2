@@ -8,8 +8,8 @@ import STL_Gmesh as G
 #Run VSP API for aircraft half mesh    
 vsp_loc = "Example"
 os.chdir(vsp_loc)
-R.run_cfd_mesh("TestAircraft.vsp3", 0.02,0.2, sym=False,farfield_scale=50.0,farfield=True)
+R.run_cfd_mesh("TestAircraft.vsp3", 0.02,0.2, sym=True,farfield_scale=50.0,farfield=True)
 
 
 #Gmesh subroutine, it is only good for Euler
-G.stl_to_su2("TestAircraft.stl", "TestAircraft.su2")
+#G.stl_to_su2("TestAircraft.stl", "TestAircraft.su2")
